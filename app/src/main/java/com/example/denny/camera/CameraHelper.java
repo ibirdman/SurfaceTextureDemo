@@ -39,17 +39,17 @@ public class CameraHelper {
             parameters.setPreviewFormat(ImageFormat.NV21);
 
             //设置对焦模式
-            parameters.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
+            //parameters.setFocusMode(Camera.Parameters.FOCUS_MODE_AUTO);
 
-            Camera.Size size = findBestSizeValue(parameters.getSupportedPreviewSizes(), screenW, screenH, 0.1f);
+/*            Camera.Size size = findBestSizeValue(parameters.getSupportedPreviewSizes(), screenW, screenH, 0.1f);
             parameters.setPreviewSize(size.width, size.height);
             size = findBestSizeValue(parameters.getSupportedPictureSizes(), screenW, screenH, 0.1f);
-            parameters.setPictureSize(size.width, size.height);
+            parameters.setPictureSize(size.width, size.height);*/
 
             camera.setParameters(parameters);
             camera.startPreview();
 
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }

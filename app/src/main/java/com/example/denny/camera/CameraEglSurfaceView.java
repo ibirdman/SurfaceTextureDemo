@@ -63,12 +63,11 @@ public class CameraEglSurfaceView extends EglSurfaceView implements CameraFboRen
         switch (angle) {
             case Surface.ROTATION_0:
                 if (cameraId == Camera.CameraInfo.CAMERA_FACING_BACK) {
-                    render.setAngle(90, 0, 0, 1);
+//                    render.setAngle(90, 0, 0, 1); //gwas
                     render.setAngle(180, 1, 0, 0);
                 } else {
                     render.setAngle(90f, 0f, 0f, 1f);
                 }
-
                 break;
             case Surface.ROTATION_90:
                 if (cameraId == Camera.CameraInfo.CAMERA_FACING_BACK) {
